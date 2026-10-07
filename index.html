@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EPICONSA | Artículos religiosos</title>
+  <meta name="description" content="Rosarios, imágenes, cirios, biblias y escapularios para el hogar y la parroquia. Pide por WhatsApp y coordinamos el envío.">
+  <meta name="theme-color" content="#3a1d5c">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Orden de los scripts: config -> productos -> main -->
+  <script src="js/config.js" defer></script>
+  <script src="js/productos.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#catalogo">Ir al catálogo</a>
+
+  <!-- ============ CABECERA ============ -->
+  <header class="cabecera">
+    <div class="cabecera__fila contenedor">
+      <a class="marca" href="#inicio" aria-label="EPICONSA, inicio">
+        <svg class="marca__cruz" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v7h7v4h-7v9h-4v-9H3V9h7z" fill="currentColor"/></svg>
+        <span>EPICONSA</span>
+      </a>
+
+      <nav class="menu" aria-label="Secciones">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#octubre">Octubre morado</a>
+        <a href="#como-comprar">Cómo comprar</a>
+        <a href="#parroquias">Parroquias</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button class="pedido-btn" id="abrir-pedido" type="button" aria-haspopup="dialog">
+        Mi pedido
+        <span class="pedido-btn__n" id="pedido-n" aria-label="productos en el pedido">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ============ PORTADA ============ -->
+    <section class="hero contenedor">
+      <div class="hero__texto">
+        <h1>Lo que acompaña tu fe, hasta la puerta de tu casa</h1>
+        <p class="hero__sub">Rosarios, imágenes, cirios, biblias y escapularios para el hogar, la parroquia y el regalo que se guarda toda la vida.</p>
+        <div class="hero__acciones">
+          <a class="btn btn--primario" href="#catalogo">Ver catálogo</a>
+          <a class="btn btn--linea" href="#" data-wa="Hola EPICONSA, quisiera información sobre sus artículos religiosos.">Escribir por WhatsApp</a>
+        </div>
+        <p class="hero__nota">Pedidos por WhatsApp. Coordinamos pago y envío contigo.</p>
+      </div>
+
+      <div class="hero__escena">
+        <div class="rayos" aria-hidden="true"></div>
+        <figure class="nicho nicho--hero">
+          <img src="img/hero-rosario.webp" width="1000" height="1250" fetchpriority="high"
+               alt="Rosario dorado con cruz sobre un fondo violeta iluminado por la luz de una vela">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ CATÁLOGO ============ -->
+    <section class="seccion contenedor" id="catalogo" aria-labelledby="t-catalogo">
+      <div class="seccion__cab">
+        <h2 id="t-catalogo">Catálogo</h2>
+        <p class="seccion__sub">Elige lo que necesitas, agrégalo a tu pedido y envíalo por WhatsApp.</p>
+      </div>
+
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoría"></div>
+      <p class="conteo" id="conteo" aria-live="polite"></p>
+
+      <div class="productos" id="productos">
+        <noscript><p>Activa JavaScript para ver el catálogo.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ============ OCTUBRE MORADO ============ -->
+    <section class="morado" id="octubre" aria-labelledby="t-octubre">
+      <div class="contenedor morado__grid">
+        <div class="morado__texto">
+          <h2 id="t-octubre">Octubre es morado</h2>
+          <p>Es el mes del Señor de los Milagros. Reunimos lo que más se pide en las procesiones y en los hogares: escapularios, cuadros, cirios y velones.</p>
+        </div>
+        <div class="productos productos--tres" id="morado-lista"></div>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO COMPRAR ============ -->
+    <section class="seccion contenedor" id="como-comprar" aria-labelledby="t-comprar">
+      <div class="seccion__cab">
+        <h2 id="t-comprar">Cómo comprar</h2>
+      </div>
+      <ol class="pasos">
+        <li>
+          <h3>Elige tus productos</h3>
+          <p>Agrega al pedido lo que quieras del catálogo. Puedes cambiar las cantidades cuando quieras.</p>
+        </li>
+        <li>
+          <h3>Envía tu pedido</h3>
+          <p>Con un toque se abre WhatsApp con tu lista y el total ya escritos. Solo presiona enviar.</p>
+        </li>
+        <li>
+          <h3>Coordina pago y envío</h3>
+          <p>Te confirmamos disponibilidad y acordamos contigo la forma de pago y la entrega.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ PARROQUIAS ============ -->
+    <section class="parroquias" id="parroquias" aria-labelledby="t-parroquias">
+      <div class="contenedor parroquias__grid">
+        <div>
+          <h2 id="t-parroquias">¿Equipas una parroquia, colegio o capilla?</h2>
+          <p class="parroquias__sub">Cotiza por mayor y recibe una respuesta con precios por cantidad.</p>
+          <ul class="lista-oro">
+            <li>Cirios y velones por caja</li>
+            <li>Rosarios y escapularios por docena</li>
+            <li>Estampas, imágenes y cuadros</li>
+            <li>Biblias y devocionarios para grupos</li>
+          </ul>
+        </div>
+
+        <form class="formulario" id="form-cotizacion" novalidate>
+          <div class="campo">
+            <label for="f-nombre">Tu nombre</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="f-institucion">Parroquia, colegio o institución</label>
+            <input id="f-institucion" name="institucion" type="text" autocomplete="organization">
+          </div>
+          <div class="campo">
+            <label for="f-detalle">¿Qué necesitas?</label>
+            <textarea id="f-detalle" name="detalle" rows="4" required placeholder="Ejemplo: 50 cirios blancos de 30 cm y 20 rosarios para primera comunión"></textarea>
+          </div>
+          <p class="formulario__error" id="form-error" role="alert" hidden></p>
+          <button class="btn btn--primario" type="submit">Pedir cotización por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="pie" id="contacto">
+    <div class="contenedor pie__grid">
+      <div>
+        <p class="pie__marca">EPICONSA</p>
+        <p>Artículos religiosos para el hogar, la parroquia y el regalo.</p>
+      </div>
+      <div>
+        <h2 class="pie__titulo">Escríbenos</h2>
+        <!-- EDITAR: cambia estos datos por los reales de la empresa -->
+        <p><a href="#" data-wa="Hola EPICONSA, tengo una consulta.">WhatsApp +51 999 999 999</a></p>
+        <p><a href="mailto:ventas@epiconsa.example">ventas@epiconsa.example</a></p>
+      </div>
+      <div>
+        <h2 class="pie__titulo">Atención</h2>
+        <p>Lunes a sábado, de 9:00 a 19:00</p>
+        <p>Lima, Perú</p>
+      </div>
+    </div>
+    <p class="pie__copy contenedor">© <span id="anio">2026</span> EPICONSA. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- ============ PEDIDO (panel lateral) ============ -->
+  <dialog class="pedido" id="pedido" aria-labelledby="pedido-titulo">
+    <div class="pedido__cab">
+      <h2 id="pedido-titulo">Mi pedido</h2>
+      <form method="dialog"><button class="pedido__cerrar" aria-label="Cerrar pedido">&times;</button></form>
+    </div>
+
+    <p class="pedido__vacio" id="pedido-vacio">Aún no agregaste productos. Elige del catálogo y aparecerán aquí.</p>
+    <ul class="pedido__lista" id="pedido-lista"></ul>
+
+    <div class="pedido__pie">
+      <p class="pedido__total"><span>Total</span> <strong id="pedido-total">S/ 0.00</strong></p>
+      <button class="btn btn--primario btn--ancho" id="enviar-pedido" type="button" disabled>Enviar pedido por WhatsApp</button>
+      <button class="enlace-simple" id="vaciar-pedido" type="button" hidden>Vaciar pedido</button>
+    </div>
+  </dialog>
+
+  <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
+</body>
+</html>
